@@ -1,0 +1,43 @@
+{
+  "name": "reelherbs",
+  "displayName": "Reel Herbs",
+  "publisher": "ReelHerbs",
+  "description": "Watch reels inside VS Code with smooth snap scrolling",
+  "version": "1.0.0",
+  "repository": "",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "ReelHerbs_logo1.png",
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "reelherbs.RellHerbs",
+        "title": "Reel Herbs"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.104.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.34.0"
+  },
+  "dependencies": {
+    "sound-play": "^1.1.0"
+  }
+}
