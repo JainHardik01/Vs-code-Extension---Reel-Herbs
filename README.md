@@ -30,4 +30,44 @@ Showcased basic reel scrolling and video playback.
 - v0.1.1 (Main Release): Added Auto Scroll support (smooth snap between reels).Fixed audio autoplay block issue → now audio plays seamlessly without user interaction problems.
 Improved UI responsiveness for smoother reel transitions.
 
+- v1.0.0: Added extra video
+
 Enjoy using ReelHerbs to streamline your tasks!
+
+## 🛠️ How to Use This Extension
+
+- Create two folders in your project directory:
+  - `videos` → place your video files (`.mp4`) here  
+  - `audios` → place your audio files (`.mp3`) here
+  - if folder not found then make then put the things 
+
+### 1. Organize Your Media Files
+- Place your video files (`.mp4`) and audio files (`.mp3`) in the designated folder of your project.
+
+### 2. Update in `video_data.json` and `Extension.js`
+- Open the `video_data.json` file in your project.
+- Update the `video_file` and `audio_file` fields for each entry to match your media files. Example:
+
+```json
+{
+  "video_file": "video_name.mp4",
+  "audio_file": "audio_name.mp3"
+}
+```
+
+- Remove this `**${extraCard}**`
+
+```js
+if (item.audioUri && item.videoUri) {
+            return `
+        <div class="card" data-audio="${item.audioUri}">
+            <video  muted class="reel-video">
+                <source src="${item.videoUri}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        ${extraCard}
+    `;
+}
+```
+- `**if code not work message me**`

@@ -4,7 +4,10 @@
   "publisher": "ReelHerbs",
   "description": "Watch reels inside VS Code with smooth snap scrolling",
   "version": "1.0.0",
-  "repository": "",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/JainHardik01/Vs-code-Extension---Reel-Herbs"
+  },
   "engines": {
     "vscode": "^1.104.0"
   },
@@ -12,9 +15,7 @@
     "Other"
   ],
   "icon": "ReelHerbs_logo1.png",
-  "activationEvents": [
-    "*"
-  ],
+  "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
     "commands": [
